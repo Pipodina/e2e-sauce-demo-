@@ -1,0 +1,9 @@
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+allure-results/
+allure-report/
+# Historial de tendencias de Allure: es local, cambia en cada corrida.
+allure-history/

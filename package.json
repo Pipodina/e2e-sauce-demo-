@@ -1,0 +1,31 @@
+{
+  "name": "playwright-sauce-demo",
+  "version": "1.0.0",
+  "description": "Proyecto de aprendizaje: Playwright + TypeScript + Page Object Model sobre sauce-demo.myshopify.com",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "pretest": "npm run allure:clean",
+    "test": "playwright test",
+    "pretest:headed": "npm run allure:clean",
+    "test:headed": "playwright test --headed",
+    "pretest:smoke": "npm run allure:clean",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:smoke": "playwright test --grep @smoke",
+    "report": "playwright show-report",
+    "allure:generate": "allure generate allure-results",
+    "allure:open": "allure open allure-report",
+    "allure": "allure generate allure-results && allure open allure-report",
+    "allure:clean": "node -e \"require('fs').rmSync('allure-results',{recursive:true,force:true})\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6",
+    "allure": "^3.22.1",
+    "allure-js-commons": "^3.14.0",
+    "allure-playwright": "^3.14.0",
+    "typescript": "^7.0.2"
+  }
+}
